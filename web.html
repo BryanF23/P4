@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My NJIT Projects</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    /* Custom styles */
+    /* Bryan Fontanez, IS 117-006, Fall 2024 */
+    .navbar {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+    }
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .jumbotron {
+      background-color: #343a40;
+      background-size: cover;
+      padding: 20px;
+      color: white;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    }
+    .jumbotron h1, .jumbotron p {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .card {
+      background-color: #f8f9fa;
+      border: none;
+      transition: transform 0.3s ease;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    /* Added styles for image and text */
+    .content-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .content {
+      width: 48%; /* Adjust as needed */
+    }
+    .image {
+      height: 200px; /* Adjust height as needed */
+      object-fit: cover;
+    }
+    .text {
+      animation: fadeInRight 1s ease;
+    }
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    /* Footer styles */
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+    }
+    /* Contact form styles */
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">My NJIT Projects</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="web.html">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownContent">
+          <a class="dropdown-item" href="project1.html">VR/AR FSI Project</a>
+          <a class="dropdown-item" href="project2.html">EOP Rocket Project</a>
+          <a class="dropdown-item" href="content3.html">Project 3</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Home Page -->
+<div class="container">
+  <div class="jumbotron mt-3 text-center">
+    <h1 class="display-4 animated fadeInDown">Welcome to all my Project at NJIT (so far)</h1>
+    <p class="lead animated fadeInUp">This page showcases the projects I have accomplished so far at NJIT.</p>
+  </div>
+</div>
+
+
+<!-- Content Pages -->
+<div class="container content-container">
+  <!-- Content Page 1 -->
+  <div class="card mt-3 content">
+    <img src="images/Projectimg.png" class="image" alt="Project Image">
+    <div class="card-body text">
+      <h5 class="card-title"><a href="project1.html" class="text-primary">Project 1 - VR/AR FSI Project</a></h5>
+      <p class="card-text">During my time in high school, I participated in the FSI program where I developed a VR experience that enables students to practice investigative skills in a simulated crime scene environment. My team and I were active on the campus that summer preparing for our first semester at NJIT through the university’s EOP Program.</p>
+    </div>
+  </div>
+
+
+  <!-- Content Page 2 -->
+  <div class="card mt-3 content">
+    <img src="images/rocket.jpeg" class="image" alt="Project Image">
+    <div class="card-body text">
+      <h5 class="card-title"><a href="project2.html" class="text-primary">Project 2 - EOP Rocket Project</a></h5>
+      <p class="card-text">During my time in the EOP program, students were assigned to work together in cohesion to make different parts for a rocket launch. All students were assigned different roles; I was tasked with coding a website that details our process during the buildup to the initial launch day.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; by Bryan Fontanez 4/16/2024</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

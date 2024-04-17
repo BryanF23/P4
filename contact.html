@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    /* Custom styles */
+    .navbar {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+    }
+    .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .jumbotron {
+      background-color: #343a40;
+      background-size: cover;
+      padding: 20px;
+      color: white;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    }
+    .jumbotron h1, .jumbotron p {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .card {
+      background-color: #f8f9fa;
+      border: none;
+      transition: transform 0.3s ease;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    /* Added styles for image and text */
+    .content-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .content {
+      width: 48%; /* Adjust as needed */
+    }
+    .image {
+      height: 200px; /* Adjust height as needed */
+      object-fit: cover;
+    }
+    .text {
+      animation: fadeInRight 1s ease;
+    }
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    /* Footer styles */
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+    }
+    /* Contact form styles */
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Added styles for the back button */
+    .back-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Drop shadow */
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #0056b3;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- Contact Form -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">Contact Form</div>
+  
+          <div class="card-body">
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <!-- This is the modified back button -->
+    <button class="back-button" onclick="goBack()">Go Back</button>
+
+    <script>
+        // JavaScript function to go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+  
+  <!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
