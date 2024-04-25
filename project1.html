@@ -9,57 +9,84 @@
     <style>
         /* Custom styles */
         /* Bryan Fontanez, IS 117-006, Fall 2024 */
+
+        /* Navbar */
         .navbar {
-          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-          border-radius: 2px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
         }
+
         .navbar-brand {
-          color: #fff;
-          font-weight: bold;
+            color: #fff;
+            font-weight: bold;
         }
+
         .navbar-nav .nav-link {
-          color: #fff;
+            color: #fff;
         }
+
+        /* Body */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa; /* Light gray background */
+            background-color: #f8f9fa;
+            /* Light gray background */
         }
+
+        /* Project Container */
         .project-container {
-            text-align: center;
             margin-top: 50px;
         }
 
         .project-image {
-            height: 200px; /* Fixed height */
-            width: auto; /* Let width adjust proportionally */
-            border-radius: 10px 0 0 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 5px solid #343434;
+            /* Blue border */
+            transition: transform 0.3s ease-in-out;
+            /* Add transition effect */
+        }
+
+        .project-image:hover {
+            transform: scale(1.05);
+            /* Enlarge image on hover */
         }
 
         .project-details {
             text-align: left;
+            padding: 0 15px;
+            /* Add padding to align text with images */
         }
 
+        /* Back Button */
         .back-button {
             position: fixed;
             bottom: 20px;
             left: 20px;
             padding: 10px 20px;
-            background-color: #007bff; /* Blue color */
+            background-color: #007bff;
+            /* Blue color */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            z-index: 1000;
         }
 
+        /* Footer */
         footer {
-            background-color: #343a40; /* Dark gray footer background */
+            background-color: #343a40;
+            /* Dark gray footer background */
             color: white;
             padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
 
         footer a {
-            color: #007bff; /* Blue link color */
+            color: #fff;
+            /* White link color */
             text-decoration: none;
         }
     </style>
@@ -68,62 +95,73 @@
 
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><b> My NJIT Projects </b></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="web.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Projects
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownContent">
-                <a class="dropdown-item" href="project1.html">VR/AR FSI Project</a>
-                <a class="dropdown-item" href="project2.html">EOP Rocket Project</a>
-                <a class="dropdown-item" href="content3.html">Project 3</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="web.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownContent" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownContent">
+                        <a class="dropdown-item" href="project1.html">VR/AR FSI Project</a>
+                        <a class="dropdown-item" href="project2.html">EOP Rocket Project</a>
+                        <a class="dropdown-item" href="content3.html">Project 3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
 
+    <!-- Project Container -->
     <div class="container project-container">
         <div class="row">
             <div class="col-md-4">
                 <img src="images/Projectimg.png" class="project-image" alt="Project Image">
             </div>
-            <div class="col-md-4"> <!-- Added missing class -->
+            <div class="col-md-4">
                 <img src="images/projectslide.PNG" class="project-image" alt="Project Image">
-            </div> <!-- Added closing div tag -->
-            <div class="col-md-8 project-details"> <!-- Added missing class and adjusted columns -->
-                <h5 class="card-title"><p> <b>NJIT's Forensic Science Initiative Celebrates First Graduates - VR/AR FSI Project</b></p> </h5>
-                <p class="card-text"><em>"Barringer High School graduates Bryan Fontanez and Santiago Parhuana, and STEM Innovation Academy of the Oranges graduate Caleb Osorio sought to develop a VR experience that enables students to practice investigative skills in a simulated crime scene environment. All three team members have been active on campus this summer preparing for their first semester at NJIT through the university’s Educational Opportunity Program."</em></p>
+            </div>
+            <div class="col-md-4 project-details">
+                <h5 class="card-title"><b>NJIT's Forensic Science Initiative Celebrates First Graduates - VR/AR FSI
+                        Project</b></h5>
+                <p class="card-text"><em>"Barringer High School graduates Bryan Fontanez and Santiago Parhuana, and STEM
+                        Innovation Academy of the Oranges graduate Caleb Osorio sought to develop a VR experience that
+                        enables students to practice investigative skills in a simulated crime scene environment. All
+                        three team members have been active on campus this summer preparing for their first semester at
+                        NJIT through the university’s Educational Opportunity Program."</em></p>
             </div>
         </div>
     </div>
 
-    <!-- This is the back button -->
+    <!-- Back Button -->
     <button class="back-button" onclick="goBack()">Go Back</button>
 
+    <!-- Main Content -->
     <main class="text-center py-3 mt-5">
-        <p class="mb-0">You can read more about the experience as a whole <a href="https://www.njit.edu/eop/" class="text-primary">here</a>.</p>
+        <p class="mb-0">You can read more about the experience as a whole <a href="https://www.njit.edu/eop/"
+                class="text-primary">here</a>.</p>
     </main>
 
+    <!-- JavaScript and Bootstrap JS -->
     <script>
         // JavaScript function to go back to the previous page
         function goBack() {
             window.history.back();
         }
     </script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
