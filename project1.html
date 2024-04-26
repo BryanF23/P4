@@ -40,22 +40,15 @@
         .project-image {
             width: 100%;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 5px solid #343434;
-            /* Blue border */
-            transition: transform 0.3s ease-in-out;
-            /* Add transition effect */
-        }
-
-        .project-image:hover {
-            transform: scale(1.05);
-            /* Enlarge image on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Added drop shadow */
         }
 
         .project-details {
             text-align: left;
-            padding: 0 15px;
-            /* Add padding to align text with images */
+            padding: 15px;
+            height: 100%;
+            /* Set height to 100% to fill the dead space */
         }
 
         /* Back Button */
@@ -90,11 +83,9 @@
             text-decoration: none;
         }
     </style>
-
 </head>
 
 <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><b> My NJIT Projects </b></a>
@@ -129,19 +120,31 @@
     <div class="container project-container">
         <div class="row">
             <div class="col-md-4">
-                <img src="images/Projectimg.png" class="project-image" alt="Project Image">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border rounded p-3">
+                            <img src="images/Projectimg.png" class="project-image" alt="Project Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="project-details">
+                            <h5 class="card-title"><b>NJIT's Forensic Science Initiative Celebrates First Graduates - VR/AR FSI
+                                    Project</b></h5>
+                            <p class="card-text"><em>"Barringer High School graduates Bryan Fontanez and Santiago Parhuana, and STEM
+                                    Innovation Academy of the Oranges graduate Caleb Osorio sought to develop a VR experience that
+                                    enables students to practice investigative skills in a simulated crime scene environment. All
+                                    three team members have been active on campus this summer preparing for their first semester at
+                                    NJIT through the university’s Educational Opportunity Program."</em></p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
-                <img src="images/projectslide.PNG" class="project-image" alt="Project Image">
-            </div>
-            <div class="col-md-4 project-details">
-                <h5 class="card-title"><b>NJIT's Forensic Science Initiative Celebrates First Graduates - VR/AR FSI
-                        Project</b></h5>
-                <p class="card-text"><em>"Barringer High School graduates Bryan Fontanez and Santiago Parhuana, and STEM
-                        Innovation Academy of the Oranges graduate Caleb Osorio sought to develop a VR experience that
-                        enables students to practice investigative skills in a simulated crime scene environment. All
-                        three team members have been active on campus this summer preparing for their first semester at
-                        NJIT through the university’s Educational Opportunity Program."</em></p>
+                <div class="border rounded p-3">
+                    <img src="images/projectslide.PNG" class="project-image" alt="Project Image">
+                </div>
             </div>
         </div>
     </div>
