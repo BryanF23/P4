@@ -35,12 +35,13 @@
         /* Project Container */
         .project-container {
             margin-top: 50px;
+            width: 90%; /* Adjust container width */
+            margin: auto; /* Center the container */
         }
 
         .project-image {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%; /* Make images fill the column */
+            height: auto; /* Maintain aspect ratio */
             /* Added drop shadow */
         }
 
@@ -51,13 +52,12 @@
             /* Set height to 100% to fill the dead space */
         }
 
-        /* Back Button */
         .back-button {
             position: fixed;
             bottom: 20px;
             left: 20px;
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #000000;
             /* Blue color */
             color: white;
             border: none;
@@ -75,6 +75,7 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            font-size: 20px; /* Increase font size */
         }
 
         footer a {
@@ -104,9 +105,9 @@
                         Projects
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownContent">
-                        <a class="dropdown-item" href="project1.html">VR/AR FSI Project</a>
-                        <a class="dropdown-item" href="project2.html">EOP Rocket Project</a>
-                        <a class="dropdown-item" href="content3.html">Project 3</a>
+                        <a class="dropdown-item" href="project1.html">EOP Rocket Project</a>
+                        <a class="dropdown-item" href="project2.html">VR/AR FSI Project</a>
+                        <a class="dropdown-item" href="project3.html">Goals for the future</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -116,30 +117,42 @@
         </div>
     </nav>
 
-    <!-- Project Container -->
     <div class="container project-container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="row">
                     <div class="col-12">
-                        <div class="border rounded p-3">
-                            <img src="images/websitepho.PNG" class="project-image" alt="Project Image">
-                        </div>
+                        <img src="images/Projectimg.png" class="project-image" alt="Project Image">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="project-details">
-                            <h5 class="card-title"><b>Summer Academic Enrichment Program 2023 EOP Summer Academic Enrichment Program - NJIT EOP Project
-                            </b></h5>
-                            <p class="card-text"><em>"During my time in the EOP program, students were assigned to work together in cohesion to make different parts for a rocket launch. All students were assigned different roles; I was tasked with coding a website that details our process during the buildup to the initial launch day."                            </em></p>
+                            <h5 class="card-title"><b>NJIT's Forensic Science Initiative Celebrates First Graduates - VR/AR FSI
+                                    Project</b></h5>
+                            <p class="card-text"><em>"Barringer High School graduates Bryan Fontanez and Santiago Parhuana, and STEM
+                                    Innovation Academy of the Oranges graduate Caleb Osorio sought to develop a VR experience that
+                                    enables students to practice investigative skills in a simulated crime scene environment. All
+                                    three team members have been active on campus this summer preparing for their first semester at
+                                    NJIT through the university’s Educational Opportunity Program."</em></p>
+                            <p>You can read more about the experience as a whole <a href="https://www.njit.edu/eop/"
+                                class="text-primary">here</a>.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="border rounded p-3">
-                    <img src="images/rocketweb.PNG" class="project-image" alt="Project Image">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/projectslide.PNG" class="project-image" alt="Project Image" style="margin-bottom: 20px;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <video controls width="100%">
+                            <source src="video/Tutorial Video V2.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,12 +160,6 @@
 
     <!-- Back Button -->
     <button class="back-button" onclick="goBack()">Go Back</button>
-
-    <!-- Main Content -->
-    <main class="text-center py-3 mt-5">
-        <p class="mb-0">You can learn more about the EOP Program here<a href="https://www.njit.edu/eop/"
-                class="text-primary">here</a>.</p>
-    </main>
 
     <!-- JavaScript and Bootstrap JS -->
     <script>
