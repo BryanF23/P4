@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NJIT FSI Project</title>
+    <title>NJIT FSI Projects</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         /* Custom styles */
@@ -35,10 +35,12 @@
         /* Project Container */
         .project-container {
             margin-top: 50px;
+            width: 90%; /* Adjust container width */
+            margin: auto; /* Center the container */
         }
 
         .project-image {
-            width: 100%;
+            width: 100%; /* Make images fill the column */
             height: auto; /* Maintain aspect ratio */
             /* Added drop shadow */
         }
@@ -50,7 +52,6 @@
             /* Set height to 100% to fill the dead space */
         }
 
-        /* Back Button */
         .back-button {
             position: fixed;
             bottom: 20px;
@@ -74,6 +75,7 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            font-size: 20px; /* Increase font size */
         }
 
         footer a {
@@ -105,7 +107,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownContent">
                         <a class="dropdown-item" href="project1.html">EOP Rocket Project</a>
                         <a class="dropdown-item" href="project2.html">VR/AR FSI Project</a>
-                        <a class="dropdown-item" href="project3.html">Goals for the future</a>
+                        <a class="dropdown-item" href="project3.html">MY RESUME</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -115,41 +117,43 @@
         </div>
     </nav>
 
-    <!-- Project Container -->
     <div class="container project-container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="row">
-                    <div class="col-12">
-                        <img src="images/websitepho.PNG" class="project-image" alt="Project Image">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="project-details">
-                            <h5 class="card-title"><b>Summer Academic Enrichment Program 2023 EOP Summer Academic Enrichment Program - NJIT EOP Project
-                            </b></h5>
-                            <p class="card-text"><em>"During my time in the EOP program, students were assigned to work together in cohesion to make different parts for a rocket launch. All students were assigned different roles; I was tasked with coding a website that details our process during the buildup to the initial launch day."
-
-                            </em></p>
-                        </div>
-                    </div>
+            <div class="col-md-6">
+                <img src="images/rocketweb.PNG" class="project-image" alt="Project Image">
+            </div>
+            <div class="col-md-6">
+                <img src="images/websitepho.PNG" class="project-image" alt="Project Image">
+            </div>
+            <div class="col-md-6">
+                <div class="project-details">
+                    <h5 class="card-title"><b>Summer Academic Enrichment Program 2023 EOP Summer Academic Enrichment
+                            Program - NJIT EOP Project </b></h5>
+                    <p class="card-text"><em>"During my time in the EOP program, students were assigned to work
+                            together in cohesion to make different parts for a rocket launch. All students were
+                            assigned different roles; I was tasked with coding a website that details our process
+                            during the buildup to the initial launch day."
+                            <a href="https://www.njit.edu/eop/" class="text-primary">Learn more here</a>.</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <img src="images/rocketweb.PNG" class="project-image" alt="Project Image">
+                <div class="project-details">
+                    <div class="row">
+                        <div class=".col-md-2">
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <video controls width="100%">
+                                    <source src="video/NJIT Educational Opportunity Program.mp4" type="video/mp4">
+                                </video>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    
 
     <!-- Back Button -->
     <button class="back-button" onclick="goBack()">Go Back</button>
-
-    <!-- Main Content -->
-    <main class="text-center py-3 mt-5">
-        <p class="mb-0">You can learn more about the EOP Program.<a href="https://www.njit.edu/eop/"
-                class="text-primary">here</a>.</p>
-    </main>
 
     <!-- JavaScript and Bootstrap JS -->
     <script>
